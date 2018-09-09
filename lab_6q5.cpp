@@ -43,9 +43,9 @@ int choice;
 cout<<"Enter 2-add 3-to add and find maximum 4- to add and find minimum"<<endl;
 cin>>choice;
 
-else if(choice==2)
+if(choice==2)
 {  //display sum
- cout<<"sum:"<<add(num1,num2)<<endl;
+ cout<<"sum:"<<add2(num1,num2)<<endl;
 }
 else if(choice==3)
 {//display maximum  

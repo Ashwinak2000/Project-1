@@ -4,7 +4,7 @@ using namespace std;
 //addition function
  void addc(int num1,int num2,int &max)
  {//add the numbers
-  sum=num1+num2;
+  int sum=num1+num2;
   //find the greatest term
   if((num1>=num2) && (num1>=sum))
   max=num1;
@@ -20,7 +20,7 @@ int main()
  cin>>num1>>num2;
  int max=0;
  //add the numbers
- add(num1,num2,max);
+ addc(num1,num2,max);
  //display maximum
  cout<<"Maximum:"<<max<<endl;
 }

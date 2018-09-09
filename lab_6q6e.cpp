@@ -61,9 +61,9 @@ int main()
  cin>>firstnum>>secondnum;
  //display
  int sumEven,sumOdd,sumSquareEven,sumSquareOdd;
- sumEven=evensum(firstnum,secondsum);
+ sumEven=evensum(firstnum,secondnum);
 
- sumOdd=oddsum(firstnum,secondsum);
+ sumOdd=oddsum(firstnum,secondnum);
 
  sumSquareEven=evensqsum(firstnum,secondnum);
 
@@ -71,7 +71,7 @@ int main()
 
  cout<<"Even Sum:"<<sumEven;
  cout<<"Odd Sum:"<<sumOdd;
- cout<<"Odd Square Sum:"<<sumSquareodd;
+ cout<<"Odd Square Sum:"<<sumSquareOdd;
  cout<<"Even Square Sum:"<<sumSquareEven; 
 
 }
