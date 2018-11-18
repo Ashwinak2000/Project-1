@@ -39,6 +39,7 @@ class rectangle
 {
 	private:
 		point p1,p2,p3,p4;
+		float length,breadth;
 	public:
 	     rectangle()
 		 {// set points to (0,0) ,(1,0),(0,1),(1,1)
@@ -56,7 +57,7 @@ class rectangle
 		 	this->p3.set_x(p2.get_x(),p1.get_y());
 		 }
 		 
-		 print()
+	void print()
 		 {
 		 	p1.print();
 		 	p2.print();
@@ -64,15 +65,24 @@ class rectangle
 		 	p4.print();
 		 }
 		 //find side length
-		 side_len(int i=1)
-		 {  if(i==1)
-		  { //finds length
-		 	return sqrt((p1.get_x()-p2.get_x())*(p1.get_x()-p2.get_x())+(p1.get_y()-p2.get_y())*(p1.get_y()-p2.get_y()));
-		  }
+	void side_len()
+		 { 
+		    //finds length
+		 	length=sqrt((p1.get_x()-p2.get_x())*(p1.get_x()-p2.get_x())+(p1.get_y()-p2.get_y())*(p1.get_y()-p2.get_y()));
 		    //finds breadth
-		 	if(i==2)
-		 	return sqrt((p3.get_x()-p2.get_x())*(p3.get_x()-p2.get_x())+(p3.get_y()-p2.get_y())*(p3.get_y()-p2.get_y()));
-		 }
+		 	breadth=sqrt((p3.get_x()-p2.get_x())*(p3.get_x()-p2.get_x())+(p3.get_y()-p2.get_y())*(p3.get_y()-p2.get_y()));
+	     }
+		
+	 float area_comp()
+	 {
+	 	return length*breadth;
+	 }
+	 
+	 float perimeter_comp()
+	 {
+	 	return 2*(length+breadth);
+	 }
+		 
 };
 
 int main()
@@ -85,17 +95,18 @@ int main()
 	rectangle r1,r2(p1,p2);
 	r1.print();
 	r2.print();
+	r1.side_len();
+	r2.side_len();
 	
-	if(r1.side_len()>=r2.side_len())
-	  cout<<"Rectangle 1 has greater length"<<endl;
+	if(r1.area_comp()>=r2.area_comp())
+	cout<<"Rectangle 1 has greater area\n";
 	else
-	  cout<<"Rectangle 2 has greater length"<<endl;
-	  
-	if(r1.side_len(2)>=r2.side_len(2))
-	  cout<<"Rectangle 1 has greater breadth"<<endl;
+	cout<<"Rectangle 2 has greater area\n";
+	
+	if(r1.perimeter_comp()>=r2.perimeter_comp())
+	cout<<"Rectangle 1 has greater perimeter\n";
 	else
-	  cout<<"Rectangle 2 has greater breadth"<<endl;
-	  
+	cout<<"Rectangle 2 has greater perimeter\n";
 	
 	
 }
