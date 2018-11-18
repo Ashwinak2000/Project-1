@@ -29,7 +29,7 @@ class point
 			return y;
 		}
 		//print function
-		print()
+	void print()
 		{
 			cout<<"Coordinate is:("<<x<<", "<<y<<")"<<endl;
 		}
