@@ -8,17 +8,17 @@ class rectangle
 	
 	public:
 		    float get_length()
-		    {
+		    {//get the length
 		    	return length;
 			}
 			
 			float get_breadth()
-		    {
+		    {// get the breadth
 		    	return breadth;
 			}
 			
 			void set()
-			{
+			{// set the length and breadth
 				cout<<"enter length"<<endl;
 				cin>>length;
 				cout<<"enter breadth"<<endl;
